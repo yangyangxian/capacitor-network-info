@@ -10,7 +10,8 @@ public class NetworkInfoPlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "NetworkInfoPlugin"
     public let jsName = "NetworkInfo"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
+        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getCurrentIp", returnType: CAPPluginReturnPromise)
     ]
     private let implementation = NetworkInfo()
 
@@ -18,6 +19,13 @@ public class NetworkInfoPlugin: CAPPlugin, CAPBridgedPlugin {
         let value = call.getString("value") ?? ""
         call.resolve([
             "value": implementation.echo(value)
+        ])
+    }
+
+    @objc func getCurrentIp(_ call: CAPPluginCall) {
+        let ip = implementation.getCurrentIp()
+        call.resolve([
+            "ip": ip
         ])
     }
 }

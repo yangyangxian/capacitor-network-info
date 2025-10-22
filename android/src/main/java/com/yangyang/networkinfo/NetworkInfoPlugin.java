@@ -19,4 +19,12 @@ public class NetworkInfoPlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+    @PluginMethod
+    public void getCurrentIp(PluginCall call) {
+        String ip = implementation.getCurrentIp();
+        JSObject ret = new JSObject();
+        ret.put("ipAddress", ip);
+        call.resolve(ret);
+    }
 }

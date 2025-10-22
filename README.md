@@ -14,6 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`echo(...)`](#echo)
+* [`getCurrentIp()`](#getcurrentip)
 
 </docgen-index>
 
@@ -31,6 +32,17 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 | **`options`** | <code>{ value: string; }</code> |
 
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+
+--------------------
+
+
+### getCurrentIp()
+
+```typescript
+getCurrentIp() => Promise<IP>
+```
+
+**Returns:** <code>Promise&lt;IP&gt;</code>
 
 --------------------
 
