@@ -25,7 +25,7 @@ public class NetworkInfoPlugin: CAPPlugin, CAPBridgedPlugin {
     @objc func getCurrentIp(_ call: CAPPluginCall) {
         let ip = implementation.getCurrentIp()
         call.resolve([
-            "ip": ip
+            "ipAddress": ip
         ])
     }
 }
