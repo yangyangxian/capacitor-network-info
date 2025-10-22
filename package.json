@@ -1,6 +1,6 @@
 {
   "name": "capacitor-network-info",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "To get network information.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
